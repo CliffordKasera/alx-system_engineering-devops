@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l -a -Sr \n
+ls -an \n
