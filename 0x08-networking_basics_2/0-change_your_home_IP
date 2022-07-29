@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Configurng an Ubuntu Server
+
+cp /etc/hosts ~/hosts.new
+sed -i s/127.*$/127.0.0.2\\tlocalhost\\n8.8.8.8\\tfacebook.com/g hosts_tmp
+cp -f hosts_tmp /etc/hosts
