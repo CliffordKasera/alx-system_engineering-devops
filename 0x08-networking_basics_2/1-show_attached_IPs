@@ -1,3 +1,4 @@
-Oys all active IPv4 IPs on the machine it’s executed on.
+#!/usr/bin/env bash
+# Displays all acive IPv4 addresses.
 
-ifconfig | grep "inet addr" | cut -d ":" -f2 | cut -d " " -f1
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
